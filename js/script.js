@@ -39,15 +39,6 @@ function titleClickHandler(event){
    
     targetArticle.classList.add('active');
     }
-  
-  const links = document.querySelectorAll('.titles a');
-  
-  for(let link of links){
-    link.addEventListener('click', titleClickHandler);
-  }
-
- 
- 
  
  
   const optArticleSelector = '.post',
@@ -62,28 +53,40 @@ function titleClickHandler(event){
      titleList.innerHTML = '';
     
 
-     /* [IN PROGRESS] for each article */
+     /* [DONE] for each article */
       const articles = document.querySelectorAll(optArticleSelector);
       console.log('for each article: ' , articles);
-      
+        
+      let html = '';
+
       for(let article of articles){
        document.querySelector(optArticleSelector);
        
-      /* get the article id */
+      /* [DONE] get the article id */
       const articleId = article.getAttribute('id');
        console.log('get the article id: ' , articleId);
        
-       /* find the title element */
+       /* [DONE] find the title element AND get the title from the title element */
        const articleTitle = article.querySelector(optTitleSelector).innerHTML;
-       console.log('Article title  ' , articleTitle);
-      /* get the title from the title element */
+       console.log('Article title Add ' , articleTitle);
       
-      /* create HTML of the link */
-  
+      
+      /* [IN PROGRESS] create HTML of the link */
+      const linkHTML = '<li><a href="#' + articleId + '"><span>' + articleTitle + '</span></a></li>';
+      console.log('create HTML of the link ' , linkHTML);
       /* insert link into titleList */
-  
+      html = html + linkHTML
+      console.log('content of html ' , html);
       }   
+      titleList.innerHTML = html;
+
+      const links = document.querySelectorAll('.titles a');
+      console.log('zawartość stałej links: ' ,links);
+        for(let link of links){
+          link.addEventListener('click', titleClickHandler);
   }
+
+    }
   
   generateTitleLinks();
   
