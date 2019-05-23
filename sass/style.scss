@@ -35,6 +35,12 @@ body {
   margin: 0 auto;
 }
 
+.blog .container {
+  padding-bottom: 60px;
+}
+
+
+
 .section-title {
   font-size: 22px;
   text-transform: uppercase;
@@ -147,3 +153,20 @@ body {
 .input-group.md-form.form-sm.form-2 input.amber-border  {
   border: 1px solid #ffca28;
 }
+
+
+.blog .row{
+padding-bottom: 100px;
+
+}
+
+.wrapper {
+  
+  height: 60vh;
+  margin: 0px auto;
+  overflow: hidden;
+  }
+  
+  body, html {
+  height: 100%;
+  }
