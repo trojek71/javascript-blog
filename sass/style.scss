@@ -20,9 +20,7 @@ $font-text: 'Source Sans Pro', sans-serif;
 }
 
 body {
-  background: $color-light;
   font-family: $font-text;
-  color: $color-dark;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
@@ -46,13 +44,12 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
-  //background:#aaa69d;
   text-align:center;
   
   span {
     text-transform: none;
     font-weight: 400;
-    color: lighten($color-dark, 20%);
+    //color: lighten($color-dark, 20%);
     
   }
 }
@@ -73,10 +70,7 @@ body {
 }
 
 .sidebar, .posts {
-  background: $color-light;
-  //margin-right: 10px;
-  //padding: 40px;
-  //border: 1px solid $color-dark;
+  //background: $color-light;
   border-radius: 5px;
   
 }
@@ -85,11 +79,12 @@ body {
 
 .logo {
   font-family: $font-logo;
-  font-weight: 400;
+  font-weight: 900;
   font-size: 104px;
   line-height: 1;
   text-align: center;
-  color:#130f40;
+  color:#ffb142;
+  
 }
 
 /* Lists */
@@ -107,7 +102,6 @@ body {
 .list-horizontal {
   li {
     display: inline-block;
-   
   }
 }
 
@@ -117,6 +111,7 @@ body {
   li {
     margin-bottom: 12px;
     text-align: center;
+    
   }
 }
 
@@ -132,10 +127,17 @@ body {
 /* Post */
 
 .post {
-  display: none;
+  opacity: 0;
+  transition:opacity 0.5s linear;
+  //display: none;
   background-color: #84817a;
+  position: absolute;
+  z-index: inherit 0;
   &.active {
     display: block;
+    opacity: 1;
+    position: relative;
+    z-index:1;
   }
 }
 
@@ -147,6 +149,7 @@ body {
   display: flex;
   p {
     margin: 0 10px 0 0;
+  
   }
 }
 
@@ -203,9 +206,27 @@ body {
 }
 
 .fab{
-  color:#34ace0;
+  color:#ffb142;
 }
 
-h2 {
+h2:hover {
   color:#d1ccc0;
+  text-decoration: none;
+}
+
+a {
+  color:#d1ccc0;
+  text-decoration: none;
+}
+
+.form-control{
+  background-color: #84817a; 
+}
+
+p   {
+  text-decoration:  none;
+  font-weight:      bold;
+  } 
+.best-three{
+  z-index: 4;
 }
