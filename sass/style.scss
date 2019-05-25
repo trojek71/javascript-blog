@@ -128,16 +128,15 @@ body {
 
 .post {
   opacity: 0;
-  transition:opacity 0.5s linear;
-  //display: none;
+  
   background-color: #84817a;
   position: absolute;
   z-index: inherit 0;
   &.active {
-    display: block;
+    transition:opacity 5s linear;
     opacity: 1;
     position: relative;
-    z-index:1;
+    z-index: inherit 1;
   }
 }
 
@@ -220,7 +219,7 @@ a {
 }
 
 .form-control{
-  background-color: #84817a; 
+  background-color:#d1ccc0; 
 }
 
 p   {
@@ -229,4 +228,7 @@ p   {
   } 
 .best-three{
   z-index: 4;
+}
+.btn {
+  background-color: #ffb142;
 }
