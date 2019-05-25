@@ -7,13 +7,13 @@
 }
 
 body {
-  background: #fff;
+  background: #f7f1e3;
   font-family: "Source Sans Pro", sans-serif;
   color: #444;
   font-weight: 300;
   font-size: 16px;
   line-height: 1.7;
-  color: #4834d4;
+  color: #f7f1e3;
 }
 
 .container {
@@ -30,6 +30,7 @@ body {
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-weight: 600;
+  text-align: center;
 }
 
 .section-title span {
@@ -56,7 +57,7 @@ body {
 }
 
 .sidebar, .posts {
-  background: #fff;
+  background: #f7f1e3;
   border-radius: 5px;
 }
 
@@ -75,6 +76,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  text-align: center;
 }
 
 .list .active {
@@ -88,11 +90,18 @@ body {
 /* Authors */
 .authors li {
   margin-bottom: 12px;
+  text-align: center;
+}
+
+.tags li {
+  margin-bottom: 12px;
+  text-align: center;
 }
 
 /* Post */
 .post {
   display: none;
+  background-color: #84817a;
 }
 
 .post.active {
@@ -137,17 +146,9 @@ body {
   border: 1px solid #ffca28;
 }
 
-/*.blog .row{
-padding-bottom: 100px;
-
-}*/
 .wrapper {
   margin: 0px auto;
   overflow: hidden;
-}
-
-body, html {
-  height: 100%;
 }
 
 .card img {
@@ -155,5 +156,25 @@ body, html {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.blog-head {
+  background-image: url("../images/rock-2565225_1280.jpg");
+}
+
+.blog {
+  background-color: #84817a;
+}
+
+.titles a {
+  color: #f7f1e3;
+}
+
+.fab {
+  color: #34ace0;
+}
+
+h2 {
+  color: #d1ccc0;
 }
 /*# sourceMappingURL=style.css.map */
