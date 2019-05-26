@@ -159,6 +159,10 @@ body {
      object-fit: cover;
 }
 
+.card {
+  border: none;
+}
+
 .blog-head {
   background-image: url("../images/rock-2565225_1280.jpg");
 }
@@ -200,5 +204,6 @@ p {
 
 .btn {
   background-color: #ffb142;
+  border: none;
 }
 /*# sourceMappingURL=style.css.map */
