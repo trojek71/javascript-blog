@@ -5,7 +5,6 @@
 /* Style Improvment  main*/
 
 
-
 $color-light:#f7f1e3;
 $color-dark: #444;
 
@@ -25,7 +24,6 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color:#f7f1e3;
-  
 }
 
 .container {
@@ -37,20 +35,17 @@ body {
   padding-bottom: 60px;
 }
 
-
-
-.section-title {
+.section-title{
   font-size: 22px;
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
-  text-align:center;
-  
-  span {
+  text-align: center;
+
+  span{
     text-transform: none;
     font-weight: 400;
-    //color: lighten($color-dark, 20%);
-    
+
   }
 }
 
@@ -72,7 +67,7 @@ body {
 .sidebar, .posts {
   //background: $color-light;
   border-radius: 5px;
-  
+
 }
 
 /* Logo */
@@ -84,7 +79,6 @@ body {
   line-height: 1;
   text-align: center;
   color:#ffb142;
-  
 }
 
 /* Lists */
@@ -94,9 +88,11 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
+
   .active {
     font-weight: bold;
   }
+
 }
 
 .list-horizontal {
@@ -111,29 +107,28 @@ body {
   li {
     margin-bottom: 12px;
     text-align: center;
-    
+
   }
 }
-
 
 
 .tags {
   li {
     margin-bottom: 12px;
     text-align: center;
-    
   }
 }
 /* Post */
 
 .post {
   opacity: 0;
-  
+
   background-color: #84817a;
   position: absolute;
   z-index: inherit 0;
+
   &.active {
-    transition:opacity 5s linear;
+    transition: opacity 5s linear;
     opacity: 1;
     position: relative;
     z-index: inherit 1;
@@ -146,9 +141,9 @@ body {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
-  
   }
 }
 
@@ -159,49 +154,46 @@ body {
   border-top-right-radius: 0.25rem;
   border-bottom-right-radius: 0.25rem;
 }
+
 .input-group.md-form.form-sm.form-2 input {
   border: 1px solid #bdbdbd;
   border-top-left-radius: 0.25rem;
   border-bottom-left-radius: 0.25rem;
 }
+
 .input-group.md-form.form-sm.form-2 input.red-border  {
   border: 1px solid #ef9a9a;
 }
+
 .input-group.md-form.form-sm.form-2 input.lime-border  {
   border: 1px solid #cddc39;
 }
+
 .input-group.md-form.form-sm.form-2 input.amber-border  {
   border: 1px solid #ffca28;
 }
 
-
-
-
 .wrapper {
   margin: 0px auto;
   overflow: hidden;
-  }
-  
-  
-
-  .card img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
 }
+
+.card img{
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
 .card {
   border: none;
 }
 
 .blog-head{
   background-image: url("../images/rock-2565225_1280.jpg");
-  
-  
 }
 
 .blog{
-  background-color: #84817a; 
-  
+  background-color: #84817a;
 }
 
 .titles a{
@@ -223,17 +215,19 @@ a {
 }
 
 .form-control{
-  background-color:#d1ccc0; 
+  background-color:#d1ccc0;
 }
 
-p   {
-  text-decoration:  none;
-  font-weight:      bold;
-  } 
+p {
+  text-decoration: none;
+  font-weight: bold;
+}
+
 .best-three{
   z-index: 4;
 }
+
 .btn {
-  background-color: #ffb142;
+  background-color:#ffb142;
   border: none;
 }
