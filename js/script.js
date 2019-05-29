@@ -106,7 +106,8 @@ function generateTags(){
     /* make html variable with empty string */
     let html = '';
     /* get tags from data-tags attribute */
-
+    const articleTags = article.getAttribute('data-tags');
+    console.log(' data-tags atribute (with plus): ' + articleTags);
     /* split tags into array */
 
     /* START LOOP: for each tag */
