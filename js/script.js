@@ -46,7 +46,7 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list';
 
-function generateTitleLinks(){
+function generateTitleLinks(customSelector = ''){
 
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
@@ -55,9 +55,9 @@ function generateTitleLinks(){
 
 
   /* [DONE] for each article */
-  const articles = document.querySelectorAll(optArticleSelector);
+  const articles = document.querySelectorAll(optArticleSelector + customSelector);
   console.log('for each article: ' , articles);
-
+  console.log('wartość customSelector', customSelector);
   let html = '';
 
   for(let article of articles){
@@ -178,3 +178,31 @@ function addClickListenersToTags(){
 }
 
 addClickListenersToTags();
+
+function generateAuthors(){
+  /* find all articles */
+  const articles = document.querySelectorAll(optArticleSelector);
+  console.log('find all articles ' , articles);
+  /* [DONE] START LOOP: for every article: */
+  for(let article of articles){
+    document.querySelector(optArticleSelector);
+    /* [DONE] find tags wrapper */
+    const articles = article.querySelectorAll(optArticleTagsSelector);
+    console.log('for each article: ' , articles);
+    /* make html variable with empty string */
+    let html = '';
+    /* [DONE] get tags from data-tags attribute */
+    const articleAuthors = article.getAttribute('data-author');
+    console.log(' data-tags atribute (with plus): ' + articleAuthors);
+    /* generate HTML of the link */
+    const linkHTML = '<p><a href="' + articleAuthors +'">'+ articleAuthors +'</a></p>';
+    console.log('create HTML of the link ' , linkHTML);
+    /* add generated code to html variable */
+    html = html + linkHTML;
+    console.log('content of html ' , html);
+    /* insert HTML of all the links into the tags wrapper */
+    article.querySelector('.post-author').innerHTML = html;
+  /* END LOOP: for every article: */
+  }
+}
+generateAuthors();
