@@ -123,8 +123,8 @@ function generateTags(){
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
-    articles.innerHTML = html;
-    console.log('content of html ' , html);
+    article.innerHTML = html;
+    console.log('insert HTML of all the links into the tags wrapper ' , html);
   /* END LOOP: for every article: */
   }
 }
@@ -132,11 +132,13 @@ generateTags();
 
 function tagClickHandler(event){
   /* prevent default action for this event */
-
+  event.preventDefault();
   /* make new constant named "clickedElement" and give it the value of "this" */
-
+  const clickedElement = this;
+  console.log('clickedElement (with plus): ' , clickedElement);
   /* make a new constant "href" and read the attribute "href" of the clicked element */
-
+  const href = clickedElement.getAttribute('a.active[href^="#tag-"]');
+  console.log(' href atribute (with plus): ' + href);
   /* make a new constant "tag" and extract tag from the "href" constant */
 
   /* find all tag links with class active */
