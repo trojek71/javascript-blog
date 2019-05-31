@@ -92,6 +92,23 @@ function generateTitleLinks(customSelector = ''){
 
 generateTitleLinks();
 
+function calculateTagsParams(tags){
+  const params = {max:0,min:9999};
+  for (let tag in tags){
+    console.log(tag + ' is used ' + tags[tag] + ' times');
+    params.max = tags[tag] > params.max ? tags[tag] : params.max;
+    params.min = tags[tag] < params.min ? tags[tag] : params.min;
+  }
+return params;
+
+
+
+
+}
+
+
+
+
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty array */
   let allTags={};
@@ -137,21 +154,23 @@ function generateTags(){
     article.querySelector('.list').innerHTML = html;
     console.log('insert HTML of all the links into the tags wrapper ' , html);
     /* END LOOP: for every article: */
-    }
-
-    /* [NEW] find list of tags in right column */
-    const tagList = document.querySelector('.tags');
-    /* [NEW] add html from allTags to tagList */
-    //tagList.innerHTML = allTags.join(' ');
-    console.log('lista i liczba TAGow', allTags);
-    /* [NEW] create variable for all links HTM code*/
-    let allTagsHTML = '';
-    /* [NEW] start loop: for each tag in allTags:*/
-    for (let tag in allTags){
-      allTagsHTML += tag + ' (' + allTags[tag] + ') ';
-    }
-    tagList.innerHTML = allTagsHTML;
   }
+
+  /* [NEW] find list of tags in right column */
+  const tagList = document.querySelector('.tags');
+  /* [NEW] add html from allTags to tagList */
+  //tagList.innerHTML = allTags.join(' ');
+  //console.log('lista i liczba TAGow', allTags);
+  /* [NEW] create variable for all links HTM code*/
+  const tagsParams = calculateTagsParams(allTags);
+  console.log('tagsParams:', tagsParams)
+  let allTagsHTML = '';
+  /* [NEW] start loop: for each tag in allTags:*/
+  for (let tag in allTags){
+    allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+  }
+  tagList.innerHTML = allTagsHTML;
+}
 
 
 generateTags();
