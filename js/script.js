@@ -93,6 +93,9 @@ function generateTitleLinks(customSelector = ''){
 generateTitleLinks();
 
 function generateTags(){
+  /* [NEW] create a new variable allTags with an empty array */
+  let allTags={};
+
   /* find all articles */
   const articles = document.querySelectorAll(optArticleSelector);
   console.log('find all articles ' , articles);
@@ -121,14 +124,36 @@ function generateTags(){
       /* add generated code to html variable */
       html = html + linkHTML;
       console.log('content of html ' , html);
+      /* [NEW] check if this link is NOT already in allTags */
+      if(!allTags.hasOwnProperty(tag)){
+        /* [NEW] add generated code to allTags array */
+        allTags[tag] = 1;
+      } else {
+        allTags[tag]++;
+      }
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
     article.querySelector('.list').innerHTML = html;
     console.log('insert HTML of all the links into the tags wrapper ' , html);
-  /* END LOOP: for every article: */
+    /* END LOOP: for every article: */
+    }
+
+    /* [NEW] find list of tags in right column */
+    const tagList = document.querySelector('.tags');
+    /* [NEW] add html from allTags to tagList */
+    //tagList.innerHTML = allTags.join(' ');
+    console.log('lista i liczba TAGow', allTags);
+    /* [NEW] create variable for all links HTM code*/
+    let allTagsHTML = '';
+    /* [NEW] start loop: for each tag in allTags:*/
+    for (let tag in allTags){
+      allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+    }
+    tagList.innerHTML = allTagsHTML;
   }
-}
+
+
 generateTags();
 
 
