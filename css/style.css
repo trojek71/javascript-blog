@@ -93,6 +93,7 @@ body {
 .tags li {
   margin-bottom: 12px;
   text-align: center;
+  display: inline;
 }
 
 /* Post */
@@ -206,5 +207,75 @@ p {
 .btn {
   background-color: #ffb142;
   border: none;
+}
+
+.tags .tag-size-1 {
+  font-size: 90%;
+  color: #1abc9c;
+}
+
+.tags .tag-size-2 {
+  font-size: 100%;
+  color: #3498db;
+}
+
+.tags .tag-size-3 {
+  font-size: 130%;
+  color: #9b59b6;
+}
+
+.tags .tag-size-4 {
+  font-size: 150%;
+  color: #34495e;
+}
+
+.tags .tag-size-5 {
+  font-size: 170%;
+  color: #f1c40f;
+}
+
+.tags .tag-size-6 {
+  font-size: 180%;
+  color: #e74c3c;
+}
+
+.tags .tag-size-7 {
+  font-size: 200%;
+  color: #e74c3c;
+}
+
+.authors .tag-size-1 {
+  font-size: 90%;
+  color: #ecf0f1;
+}
+
+.tag-size-2 {
+  font-size: 100%;
+  color: #d35400;
+}
+
+.authors.tag-size-3 {
+  font-size: 170%;
+  color: #c0392b;
+}
+
+.authors .tag-size-4 {
+  font-size: 150%;
+  color: #1abc9c;
+}
+
+.authors .tag-size-5 {
+  font-size: 170%;
+  color: #ecf0f1;
+}
+
+.authors .tag-size-6 {
+  font-size: 180%;
+  color: #ecf0f1;
+}
+
+.authors .tag-size-7 {
+  font-size: 200%;
+  color: #ecf0f1;
 }
 /*# sourceMappingURL=style.css.map */
