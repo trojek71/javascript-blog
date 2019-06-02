@@ -249,12 +249,12 @@ p {
   color: #ecf0f1;
 }
 
-.tag-size-2 {
+.authors .tag-size-2 {
   font-size: 100%;
   color: #d35400;
 }
 
-.authors.tag-size-3 {
+.authors .tag-size-3 {
   font-size: 170%;
   color: #c0392b;
 }
